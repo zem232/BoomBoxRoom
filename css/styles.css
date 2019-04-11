@@ -1,0 +1,51 @@
+body {
+  font-weight: 300;
+  background: #FFFFFF;
+  background-image: url("https://media.giphy.com/media/yeHiKJ5995Pd6/giphy.gif");
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+
+#boomRoom {
+  padding: 5px;
+  font-weight: 700;
+}
+
+#boxRoom {
+  padding: 5px;
+  font-weight: 700;
+}
+
+#Box1 {
+  background: #ffd1dc;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 300px;
+  margin-left: 10px;
+}
+
+#Box2 {
+  background: #ffd1dc;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 0;
+  top: 150px;
+  margin-right: 100px;
+}
+
+#back {
+  position: relative;
+  padding: 5px;
+  background: #000000;
+  color: #FFFFFF;
+  }
+}
+
+#numBoxes {
+  border: 3px solid;
+  min-height: 100px;
+  padding: 20px;
+}
