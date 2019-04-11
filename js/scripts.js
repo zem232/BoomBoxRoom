@@ -57,10 +57,12 @@ $('#boxRoom').on('click', function() {
 // When submitting the number of boxes, the value with be stored
 // and parsed as an integer, and the desired num of boxes will be displayed
 $('#boxSubmit').on('click', function() {
+  var numClicks = 0;
   $('.Boxes').hide();
+  $('.Boxes').removeAttr('style');
   var boxNum = $('#boxInput').val();
   boxNum = parseInt(boxNum); //parsing the string input to integer
-  console.log(boxNum)
+  console.log('Number of boxes: ', boxNum)
   if (boxNum > 0)  {
     $('#Box1').show();};
   if (boxNum > 1) {
@@ -79,31 +81,58 @@ $('#boxSubmit').on('click', function() {
 
 // When you select the clickme button (gobox), the boxes will animate
 
+var numClicks = 0;
 $('#gobox').on('click', function() {
+numClicks = numClicks + 1;
+if (numClicks%4 === 1) {
 $('#Box1').animate({
       top: '150px',
       opacity: '0.5',
-      height: '150px',
-      width: '150px'
-    }, 'slow', function () { $(this).removeAttr('style'); });
-
+    }, 'slow');
 $('#Box2').animate({
       bottom: '10px',
       opacity: '0.5',
-      height: '150px',
-      width: '150px'
-    }, 'slow', function () { $(this).removeAttr('style'); });
-
+    }, 'slow');
 $('#Box3').animate({
       bottom: '10px',
       opacity: '0.5',
+    }, 'slow');
+$('#Box4').animate({
+      bottom: '10px',
+      opacity: '0.5',
+    }, 'slow');
+$('#Box10').animate({
+      top: '10px',
+      opacity: '0.5',
       height: '150px',
       width: '150px'
-    }, 'slow', function () { $(this).removeAttr('style'); });
+    }, 'slow', function () { $(this).removeAttr('style'); });}
+if (numClicks%4 === 2) {
+$('#Box1').animate({
+      right: '150px',
+      opacity: '0.5',
+    }, 'slow');
+$('#Box2').animate({
+      bottom: '10px',
+      opacity: '0.5',
+    }, 'slow');
+$('#Box3').animate({
+      bottom: '10px',
+      opacity: '0.5',
+    }, 'slow');
+$('#Box4').animate({
+      bottom: '10px',
+      opacity: '0.5',
+    }, 'slow');
+$('#Box10').animate({
+      top: '10px',
+      opacity: '0.5',
+      height: '150px',
+      width: '150px'
+    }, 'slow', function () { $(this).removeAttr('style'); });}
 
+console.log('Number of clicks: ',numClicks)
   })
-
-var x=1;
 
 
 $('#back').on('click', function() {
